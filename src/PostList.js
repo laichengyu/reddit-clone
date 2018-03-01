@@ -16,7 +16,7 @@ class PostList extends Component {
     		<ListGroup>
   			{
   				posts.sort((a,b) => b.upvotes - a.upvotes)
-  				.map(post => <ListGroupItem bsClass='noborder'><Post {...post} /></ListGroupItem>)
+  				.map(post => <ListGroupItem key={post.id} bsClass='noborder'><Post {...post} /></ListGroupItem>)
   			}
     		</ListGroup>
     	</div>
