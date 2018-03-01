@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './PostList.css';
 import { ListGroup, ListGroupItem, Form, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap'
 import Post from './Post';
 import initData from '../data/data.json';

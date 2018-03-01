@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './HomePage.css';
 
 import NavBar from './NavBar';
 import PostList from './PostList';
