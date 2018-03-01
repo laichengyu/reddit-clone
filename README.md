@@ -15,7 +15,7 @@ npm install
 ```
 npm start
 ```
-Go to [localhost:3000/posts](http://localhost:3000/posts) to see the application running. Making any change on the code will automatically reload the application.
+Go to [localhost:3000/](http://localhost:3000/) to see the application running. Making any change on the code will automatically reload the application.
 
 ## Features
 * Displays a list of the top 20 most upvoted posts in the homepage with their upvotes, downvotes and topics
