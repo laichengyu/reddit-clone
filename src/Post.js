@@ -9,6 +9,18 @@ class Post extends Component {
 		downvotes: this.props.downvotes
 	}
 
+	handleUpvote() {
+		this.setState({
+			upvotes: this.state.upvotes+1
+		})
+	}
+
+	handleDownvote() {
+		this.setState({
+			downvotes: this.state.downvotes+1
+		})
+	}
+
   render() {
   	const { topic, upvotes, downvotes } = this.state;
 
@@ -17,10 +29,10 @@ class Post extends Component {
   			<Panel>
   				<Panel.Body>
   					<ButtonGroup vertical>
-	  					<Button>
+	  					<Button onClick={this.handleUpvote.bind(this)}>
 	  						<Glyphicon glyph="chevron-up" />
 	  					</Button>
-	  					<Button>
+	  					<Button onClick={this.handleDownvote.bind(this)}>
 	  						<Glyphicon glyph="chevron-down" />
 	  					</Button>
   					</ButtonGroup>
