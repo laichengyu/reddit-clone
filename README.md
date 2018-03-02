@@ -23,6 +23,7 @@ npm start
 Go to [localhost:3000/](http://localhost:3000/) to see the application running. Making any change on the code will automatically reload the application.
 
 ## Testing
+Test suites are run using Jest and Enzyme
 ```
 npm test
 ```
