@@ -41,12 +41,12 @@ class PostList extends Component {
 
     return (
     	<div className="PostList">
-    	  <Form inline onSubmit={this.handleSubmit}>
+    	  <Form inline onSubmit={this.handleSubmit} id="formSubmit">
 				  <FormGroup controlId="formInlineName">
 				    <ControlLabel>Add new post</ControlLabel>{' '}
 				    <FormControl inputRef={input => this.textInput = input} onChange={this.handleChange} type="text" placeholder="What's up?" />
 				  </FormGroup>
-				  <Button type="submit">Submit</Button>
+				  <Button type="submit" id="submitButton">Submit</Button>
 				</Form>
     		<ListGroup>
 	  			{
