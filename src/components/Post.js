@@ -4,6 +4,7 @@ import { Panel, Glyphicon, Button, ButtonGroup, Label } from 'react-bootstrap';
 
 class Post extends Component {
 	state = {
+		id: this.props.id,
 		topic: this.props.topic,
 		upvotes: this.props.upvotes,
 		downvotes: this.props.downvotes
@@ -29,10 +30,10 @@ class Post extends Component {
   			<Panel>
   				<Panel.Body>
   					<ButtonGroup vertical>
-	  					<Button onClick={this.handleUpvote}>
+	  					<Button onClick={this.handleUpvote} id="Post-upvoteButton">
 	  						<Glyphicon glyph="chevron-up" />
 	  					</Button>
-	  					<Button onClick={this.handleDownvote}>
+	  					<Button onClick={this.handleDownvote} id="Post-downvoteButton">
 	  						<Glyphicon glyph="chevron-down" />
 	  					</Button>
   					</ButtonGroup>
