@@ -8,7 +8,7 @@ class PostList extends Component {
 		posts: initData
 	};
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
 		e.preventDefault();
 		const { posts } = this.state;
 		posts.push({
@@ -23,11 +23,11 @@ class PostList extends Component {
 		this.clearFormInput();
 	}
 
-	clearFormInput() {
+	clearFormInput = () => {
 		this.textInput.value = "";
 	}
 
-	handleChange(e) {
+	handleChange = (e) => {
 		if (this.textInput.value.length <= 255) {
 			this.textInput.value = e.target.value;
 		} else {
@@ -41,10 +41,10 @@ class PostList extends Component {
 
     return (
     	<div className="PostList">
-    	  <Form inline onSubmit={this.handleSubmit.bind(this)}>
+    	  <Form inline onSubmit={this.handleSubmit}>
 				  <FormGroup controlId="formInlineName">
 				    <ControlLabel>Add new post</ControlLabel>{' '}
-				    <FormControl inputRef={input => this.textInput = input} onChange={this.handleChange.bind(this)} type="text" placeholder="What's up?" />
+				    <FormControl inputRef={input => this.textInput = input} onChange={this.handleChange} type="text" placeholder="What's up?" />
 				  </FormGroup>
 				  <Button type="submit">Submit</Button>
 				</Form>
